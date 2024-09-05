@@ -1,0 +1,21 @@
+POST https://musical-space-tribble-7697wjv5qj63p4qr-3333.app.github.dev/users HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": " Edson",
+  "email": "john@example.com"
+}
+
+####
+
+PUT https://musical-space-tribble-7697wjv5qj63p4qr-3333.app.github.dev/users/14 HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Vini",
+  "email": "john@example.com"
+}
+
+####
+
+DELETE https://musical-space-tribble-7697wjv5qj63p4qr-3333.app.github.dev/users/14 HTTP/1.1
