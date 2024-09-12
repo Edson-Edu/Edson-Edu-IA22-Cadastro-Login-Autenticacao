@@ -225,30 +225,43 @@ E você  vera a mensagem `Hello World`
 Crie um arquivo `database.ts` dentro da pasta `src` e adicione o seguinte código.
 
 ```javascript
-import { Database, open } from 'sqlite';
-import sqlite3 from 'sqlite3';
+import { open, Database } from "sqlite"
+import { Database as driver } from "sqlite3"
+import { addAliasDots as dots } from "./utils"
 
-let instance: Database | null = null;
+let instance: Database | null = null
 
-export async function connect() {
-  if (instance) return instance;
+const filename = "./database.sqlite"
 
-  const db = await open({
-     filename: './src/database.sqlite',
-     driver: sqlite3.Database
-   });
-  
+export const database = async () => {
+  if (instance)
+    return instance
+
+  const db =
+    await open({ filename, driver })
+
   await db.exec(`
     CREATE TABLE IF NOT EXISTS users (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
-      name TEXT,
-      email TEXT
+      name TEXT NOT NULL,
+      email TEXT NOT NULL,
+      username TEXT NOT NULL,
+      password TEXT NOT NULL
     )
-  `);
+  `)
 
-  instance = db;
-  return db;
+  const users: any[] = require("../initial-users.json")
+  users.forEach(async user => await db.run(`
+      INSERT INTO users (name, email, username, password) 
+      SELECT :name, :email, :username, :password
+      WHERE NOT EXISTS (SELECT 1 FROM users WHERE username = :username)
+    `, dots(user)
+  ))
+
+  return instance = db
 }
+
+database()
 ```` 
 
 # Adicionando o banco de dados
