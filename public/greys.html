@@ -70,9 +70,14 @@
 
         const btExcluir = tr.querySelector('button.excluir')
         const btEditar = tr.querySelector('button.editar')
-
+        const token = localStorage.getItem('token');
+        console.log(token);
         btExcluir.addEventListener('click', async () => {
-          await fetch(`/users/${user.id}`, { method: 'DELETE' })
+          const resp = await fetch(`/users/${user.id}/${token}`, { method: 'DELETE' })
+          if(resp.status == 401){
+            alert("Voce nao tem permissão");
+            return
+          }
           tr.remove()
         })
 
@@ -80,11 +85,16 @@
           const name = prompt('Novo nome:', user.name)
           const email = prompt('Novo email:', user.email)
 
-          await fetch(`/users/${user.id}`, {
+          const resp =  await fetch(`/users/${user.id}/${token}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name, email })
           })
+
+          if (resp.status == 401) {
+            alert("Voce nao tem permissão")
+            return 
+          }
 
           fetchData()
         })

@@ -1,8 +1,9 @@
 import express, { RequestHandler } from 'express'
 import * as userServices from './services/user.services'
 import { randomUUID } from 'crypto'
+import { database } from './database';
 
-const port = 4000
+const port = 4400
 const app = express()
 
 app.use(express.json())
@@ -34,6 +35,17 @@ const middlewareLogged: RequestHandler = (req, res, next) => {
   next()
 }
 
+const middlewareSouDono: RequestHandler = (req, res, next) => {
+  const { id, token } = req.params;
+  if (!logged[token]) {
+    return res.status(401).json({ error: "Token inválido" });
+  }
+  if (logged[token].id+"" !== id) {
+    return res.status(401).json({ error: "Você não tem permissão para atualizar este usuário" });
+  }
+  next()
+}
+
 // TOKEN CREATE :: LOGIN
 app.post("/token", async (req, res) => {
   const { username, password } = req.body
@@ -50,6 +62,25 @@ app.post("/token", async (req, res) => {
   logged[token] = user
   return res.json({ token })
 })
+
+app.put('/users/:id/:token', middlewareSouDono, async (req, res) => {
+  const db = await database();
+  const { id, token } = req.params;
+  const { name, email } = req.body;
+  const userId = parseInt(id, 10);    
+  await db.run('UPDATE users SET name = ?, email = ? WHERE id = ?', [name, email, userId]);
+  const user = await db.get('SELECT * FROM users WHERE id = ?', [userId]);
+
+  res.json(user);
+});
+
+
+app.delete('/users/:id/:token', middlewareSouDono, async (req, res) => {
+  const db = await database();
+  const { id } = req.params;
+  await db.run('DELETE FROM users WHERE id = ?', [id]);
+  res.json({ message: 'User deleted' });
+});
 
 app.get("/users/:token", middlewareLogged, async (req, res) => {
   const users = await userServices.getAllUsers()

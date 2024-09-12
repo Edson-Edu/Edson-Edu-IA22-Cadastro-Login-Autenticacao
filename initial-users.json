@@ -1,14 +1,29 @@
 [
     {
-      "name": "John Doe",
-      "email": "jhon@gmail.com",
-      "username": "jhon",
-      "password": "123123"
-    },
-    {
       "name": "Edson",
       "email": "edson@gmail.com",
       "username": "Edson_Edu",
+      "password": "123"
+    },
+    
+    {
+      "name": "Leticia",
+      "email": "leticia@gmail.com",
+      "username": "leeh_limakk",
+      "password": "123"
+    },
+
+    {
+      "name": "Yasmin",
+      "email": "yasmin@gmail.com",
+      "username": "Yas01",
+      "password": "123"
+    },
+
+    {
+      "name": "Rhai",
+      "email": "rhai@gmail.com",
+      "username": "rhai",
       "password": "123"
     }
   ]
