@@ -861,7 +861,7 @@ database()
 
 # Package.json
 
-### No arquivo ``package.json`` adicione:
+### No arquivo ``package.json`` substitua tudo por:
 ````json
 {
   "name": "2024-ia22-2tri",
