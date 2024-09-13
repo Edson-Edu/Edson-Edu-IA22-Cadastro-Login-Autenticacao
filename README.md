@@ -899,7 +899,7 @@ database()
 
 ### Acesse no seu navegador. Para isso, vá até a opção porta e clique no seguinte icone.
 
-![Imagem do Local de Acesso](#imagem) 
+![Imagem do Local de Acesso]( img/botao) 
 
 ### Na tela de login, insira o nome de usuário `Joao` e a senha `123`, e clique no botão **Login**.
 
