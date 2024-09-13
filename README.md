@@ -1,6 +1,6 @@
 # Oi!
 ### Seja bem-vindo a mais um tutorial!
-### Hoje vamos fazer algumas atividades, que explicarei de forma mais detalhada no final. :)
+### Hoje vamos fazer algumas atividades, que explicarei de forma mais detalhada no final de cada arquivo. :)
 
 ![Tutorial](https://github.com/Edson-Edu/IA22-Cadastro-Login-Autenticacao/blob/main/img/logo.gif?raw=true)
 
