@@ -62,7 +62,7 @@ Siga os passos abaixo, executando os comandos no terminal um de cada vez:
 
 6. **Crie os arquivos principais para o projeto:**
     ```bash
-    touch src/app.ts public/index.html public/index2.css public/index.css public/greys.html public/main.js initial-users.json src/services/user.services.ts src/utils/addAliasDots.ts src/utils/index.ts
+    touch src/app.ts src/databa.ts public/index.html public/index2.css public/index.css public/greys.html public/main.js initial-users.json src/services/user.services.ts src/utils/addAliasDots.ts src/utils/index.ts
     ```
 ### Agora voce ja tem todos os arquivos necessarios para continuarmos nosso servidor de autenticação.
 
@@ -247,23 +247,6 @@ document.querySelector('button.logout').addEventListener('click', async () => {
 
   <script>
     const form = document.querySelector('form')
-
-    // form.addEventListener('submit', async (event) => {
-    //   event.preventDefault()
-
-    //   const name = form.name.value
-    //   const email = form.email.value
-
-    //   await fetch('/users', {
-    //     method: 'POST',
-    //     headers: { 'Content-Type': 'application/json' },
-    //     body: JSON.stringify({ name, email })
-    //   })
-
-    //   form.reset()
-    //   fetchData()
-    // })
-
     const tbody = document.querySelector('tbody')
 
     async function fetchData() {
@@ -809,6 +792,51 @@ app.listen(port, () => console.log(`⚡ Server is running on port ${port}`))
     - Endpoint para atualizar as informações de um usuário. Requer que o token corresponda ao ID do usuário.
   - **`DELETE /users/:id/:token`**:
     - Endpoint para excluir um usuário. Requer que o token corresponda ao ID do usuário.
+
+
+# database.ts
+### Dentro da pasta ```src```, voce encontrara o arquivo ``database.ts`` e adicione:
+
+````ts
+import { open, Database } from "sqlite"
+import { Database as driver } from "sqlite3"
+import { addAliasDots as dots } from "./utils"
+
+let instance: Database | null = null
+
+const filename = "./database.sqlite"
+
+export const database = async () => {
+  if (instance)
+    return instance
+
+  const db =
+    await open({ filename, driver })
+
+  await db.exec(`
+    CREATE TABLE IF NOT EXISTS users (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      name TEXT NOT NULL,
+      email TEXT NOT NULL,
+      username TEXT NOT NULL,
+      password TEXT NOT NULL
+    )
+  `)
+
+  const users: any[] = require("../initial-users.json")
+  users.forEach(async user => await db.run(`
+      INSERT INTO users (name, email, username, password) 
+      SELECT :name, :email, :username, :password
+      WHERE NOT EXISTS (SELECT 1 FROM users WHERE username = :username)
+    `, dots(user)
+  ))
+
+  return instance = db
+}
+
+database()
+````
+### Este arquivo está configurando o banco de dados para o projeto.
 
 # Usuarios
 ### No arquivo ``initial-users.json`` adicione: 
