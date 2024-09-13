@@ -6,6 +6,10 @@
 
 ![Tutorial](https://github.com/Edson-Edu/IA22-Cadastro-Login-Autenticacao/blob/main/img/logoo.gif?raw=true)
 
+<div style="display: inline_block"><br/>
+   <img align="center" alt="C" src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" />
+</div>
+
 ## Autenticação de Usuários (Single Server)
 
 Autenticação é o processo de verificar se alguém é quem diz ser.
@@ -15,6 +19,10 @@ Autenticação é o processo de verificar se alguém é quem diz ser.
 - **Autenticação:** "Você é quem você diz que é?"
 - **Autorização:** "O que você pode fazer?"
 # 
+
+<div style="display: inline_block"><br/>
+   <img align="center" alt="C" src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" />
+</div>
 
 # Iniciando um Repositório no CodeSpace
 
@@ -28,6 +36,9 @@ Autenticação é o processo de verificar se alguém é quem diz ser.
 ### Espere a página carregar para continuar os próximos passos. Sua tela deverá estar assim:
 ![Tela inicial do CodeSpace](https://raw.githubusercontent.com/Edson-Edu/2024-IA22-2TRI/main/img/tela_inicial.PNG)
 
+<div style="display: inline_block"><br/>
+   <img align="center" alt="C" src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" />
+</div>
 
 # Configuração do Projeto de Autenticação
 
@@ -67,6 +78,10 @@ Siga os passos abaixo, executando os comandos no terminal um de cada vez:
     touch src/app.ts src/database.ts public/index.html public/index2.css public/index.css public/greys.html public/main.js initial-users.json src/services/user.services.ts src/utils/addAliasDots.ts src/utils/index.ts
     ```
 ### Agora voce ja tem todos os arquivos necessarios para continuarmos nosso servidor de autenticação.
+
+<div style="display: inline_block"><br/>
+   <img align="center" alt="C" src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" />
+</div>
 
 # Index.html
 ### Dentro da pasta ```public```, voce encontrara o arquivo ``index.html`` e adicione:
@@ -114,6 +129,10 @@ Siga os passos abaixo, executando os comandos no terminal um de cada vez:
 ````
 
 ### Este arquivo esta criando a estrutura básica da página de autenticação.
+
+<div style="display: inline_block"><br/>
+   <img align="center" alt="C" src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" />
+</div>
 
 # Main.js
 ### Dentro da pasta ```public```, voce encontrara o arquivo ``main.js`` e adicione:
@@ -210,7 +229,9 @@ document.querySelector('button.logout').addEventListener('click', async () => {
   - O botão "Logout" envia uma solicitação `DELETE` para `/token/${token}`, removendo o token do servidor.
   - O status da resposta é exibido no elemento `<pre>`. Se o logout falhar, uma mensagem de erro é exibida e o token é removido do `localStorage`.
 
-
+<div style="display: inline_block"><br/>
+   <img align="center" alt="C" src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" />
+</div>
 
 # Greys.html
 ### Dentro da pasta ```public```, voce encontrara o arquivo ``greys.html`` e adicione:
@@ -312,6 +333,10 @@ document.querySelector('button.logout').addEventListener('click', async () => {
 ````
 
 ### Este arquivo está criando a interface para gerenciar os usuários após o login.
+
+<div style="display: inline_block"><br/>
+   <img align="center" alt="C" src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" />
+</div>
 
 # Agora vamos estilizar as duas paginas
 
@@ -593,6 +618,10 @@ pre {
 
 ````
 
+<div style="display: inline_block"><br/>
+   <img align="center" alt="C" src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" />
+</div>
+
 # Services
 
 ### Dentro da pasta ```src```, voce encontrara outra pasta chamada ``services``, dentro dela tera o arquivo ``user.services.ts`` e nele adicione:
@@ -621,6 +650,10 @@ export const getAllUsers = async () => {
   - Esta função se conecta ao banco de dados e executa uma consulta SQL para obter todos os usuários.
   - Retorna uma lista de usuários com seus IDs, nomes, e-mails e nomes de usuário.
 
+<div style="display: inline_block"><br/>
+   <img align="center" alt="C" src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" />
+</div>
+
 # Utils
 ### Dentro da pasta ```src```, voce encontrara outra pasta chamada ``utils``, dentro dela tera o arquivo ``addAliasDots.ts`` e nele adicione:
 
@@ -639,6 +672,10 @@ export default function addAliasDots(obj: any) {
 ````ts
 export { default as addAliasDots } from "./addAliasDots"
 ````
+
+<div style="display: inline_block"><br/>
+   <img align="center" alt="C" src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" />
+</div>
 
 # App.ts
 ### Dentro da pasta ```src```, voce encontrara o arquivo ``app.ts`` e adicione:
@@ -795,6 +832,9 @@ app.listen(port, () => console.log(`⚡ Server is running on port ${port}`))
   - **`DELETE /users/:id/:token`**:
     - Endpoint para excluir um usuário. Requer que o token corresponda ao ID do usuário.
 
+<div style="display: inline_block"><br/>
+   <img align="center" alt="C" src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" />
+</div>
 
 # database.ts
 ### Dentro da pasta ```src```, voce encontrara o arquivo ``database.ts`` e adicione:
@@ -840,6 +880,10 @@ database()
 ````
 ### Este arquivo está configurando o banco de dados para o projeto.
 
+<div style="display: inline_block"><br/>
+   <img align="center" alt="C" src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" />
+</div>
+
 # Usuarios
 ### No arquivo ``initial-users.json`` adicione: 
 ````json
@@ -860,6 +904,10 @@ database()
   ]
 ````
 ### Este arquivo está criando um conjunto inicial de usuários para o banco de dados.
+
+<div style="display: inline_block"><br/>
+   <img align="center" alt="C" src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" />
+</div>
 
 # Package.json
 
@@ -895,6 +943,10 @@ database()
 ````
 
 
+<div style="display: inline_block"><br/>
+   <img align="center" alt="C" src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" />
+</div>
+
 # Executando
 
 ### No terminal, digite `npm run dev` e pressione Enter.
@@ -911,9 +963,17 @@ database()
 
 ### Note que você só poderá editar e excluir o seu próprio usuário.
 
-# Parabéns!
- Você chegou ao fim do tutorial! 🎉
+# Parabéns! Você chegou ao fim do tutorial! 🎉
+
+<div style="display: inline_block"><br/>
+   <img align="center" alt="C" src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" />
+</div>
+
 # Autores
 
 | [<img loading="lazy" src="https://avatars.githubusercontent.com/u/106202834?v=4" width=115><br><sub>Edson Edu</sub>](https://github.com/Edson-Edu) |  [<img loading="lazy" src="https://avatars.githubusercontent.com/u/106815323?v=4" width=115><br><sub>Letícia Lima</sub>](https://github.com/leh-lima) |   [<img loading="lazy" src="https://avatars.githubusercontent.com/u/106816015?v=4" width=115><br><sub>Yasmin Andrade</sub>](https://github.com/yasandradeRj) |  [<img loading="lazy" src="https://avatars.githubusercontent.com/u/140689702?v=4" width=115><br><sub>Rhai Vitor</sub>](https://github.com/Rhaiiiii) |
 | :---: | :---: | :---: | :---: |
+
+<div style="display: inline_block"><br/>
+   <img align="center" alt="C" src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" />
+</div>
