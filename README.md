@@ -903,9 +903,11 @@ database()
 
 ### Na tela de login, insira o nome de usuário `Joao` e a senha `123`, e clique no botão **Login**.
 
-![Imagem da Tela de Login](#imagem) 
+![Imagem da Tela de Login](https://github.com/Edson-Edu/IA22-Cadastro-Login-Autenticacao/blob/main/img/Login.png?raw=true) 
 
 ### Após o login, você será direcionado para a página principal, onde poderá ver todos os usuários cadastrados. 
 
 ### Note que você só poderá editar e excluir o seu próprio usuário.
 
+# Parabéns!
+ Você chegou ao fim do tutorial! 🎉
