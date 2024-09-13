@@ -897,9 +897,9 @@ database()
 
 ### No terminal, digite `npm run dev` e pressione Enter.
 
-### Acesse no seu navegador. Para isso, vá até a opção porta e clique no seguinte icone.
+### Acesse no seu navegador. Para isso, vá até a opção ``Portas`` e clique no seguinte icone.
 
-![Imagem do Local de Acesso]( img/botao) 
+![Imagem do Local de Acesso](https://github.com/Edson-Edu/IA22-Cadastro-Login-Autenticacao/blob/main/img/botao.png?raw=true) 
 
 ### Na tela de login, insira o nome de usuário `Joao` e a senha `123`, e clique no botão **Login**.
 
