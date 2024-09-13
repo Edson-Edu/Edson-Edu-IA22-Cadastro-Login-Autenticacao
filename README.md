@@ -4,7 +4,7 @@
 
 
 
-![Tutorial](https://github.com/Edson-Edu/IA22-Cadastro-Login-Autenticacao/blob/main/img/logo.gif?raw=true)
+![Tutorial](https://github.com/Edson-Edu/IA22-Cadastro-Login-Autenticacao/blob/main/img/logoo.gif?raw=true)
 
 ## Autenticação de Usuários (Single Server)
 
