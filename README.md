@@ -67,7 +67,7 @@ Siga os passos abaixo, executando os comandos no terminal um de cada vez:
 ### Agora voce ja tem todos os arquivos necessarios para continuarmos nosso servidor de autenticação.
 
 # Index.html
-### Dentro da pasta ```public```, voce encontrara o arquivo ``index.js`` e adicione:
+### Dentro da pasta ```public```, voce encontrara o arquivo ``index.html`` e adicione:
 
 ````html
 <!DOCTYPE html>
@@ -830,3 +830,20 @@ app.listen(port, () => console.log(`⚡ Server is running on port ${port}`))
   ]
 ````
 ### Este arquivo está criando um conjunto inicial de usuários para o banco de dados.
+
+# Executando
+
+### No terminal, digite `npm run dev` e pressione Enter.
+
+### Acesse no seu navegador. Para isso, vá até a opção porta e clique no seguinte icone.
+
+![Imagem do Local de Acesso](#imagem) 
+
+### Na tela de login, insira o nome de usuário `Joao` e a senha `123`, e clique no botão **Login**.
+
+![Imagem da Tela de Login](#imagem) 
+
+### Após o login, você será direcionado para a página principal, onde poderá ver todos os usuários cadastrados. 
+
+### Note que você só poderá editar e excluir o seu próprio usuário.
+
