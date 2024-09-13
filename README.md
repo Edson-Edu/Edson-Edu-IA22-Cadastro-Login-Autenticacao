@@ -2,7 +2,7 @@
 ### Seja bem-vindo a mais um tutorial!
 ### Hoje vamos fazer algumas atividades, que explicarei de forma mais detalhada no final. :)
 
-![Tutorial](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExem94anp2M255anhoYXB1NTdjM2p1Ymd3NmZxdGlqYm05NWdnbmFwayZlcD12MV9naWZzX3NlYXJjaCZjdD1n/V4NSR1NG2p0KeJJyr5/giphy.gif)
+![Tutorial](https://github.com/Edson-Edu/IA22-Cadastro-Login-Autenticacao/blob/main/img/logo.gif?raw=true)
 
 ## Autenticação de Usuários (Single Server)
 
