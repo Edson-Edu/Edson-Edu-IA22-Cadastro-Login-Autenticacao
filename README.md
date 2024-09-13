@@ -625,6 +625,7 @@ pre {
 # Services
 
 ### Dentro da pasta ```src```, voce encontrara outra pasta chamada ``services``, dentro dela tera o arquivo ``user.services.ts`` e nele adicione:
+(Vai dar erro, porem é so seguir o tuturial normalmente e ocorrera tudo certo)
 
 ````ts
 import { database  } from "../database"
