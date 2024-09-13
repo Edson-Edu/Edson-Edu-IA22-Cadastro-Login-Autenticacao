@@ -1,6 +1,8 @@
-# Oi!
+# Olá!
 ### Seja bem-vindo a mais um tutorial!
 ### Hoje vamos fazer algumas atividades, que explicarei de forma mais detalhada no final de cada arquivo. :)
+
+
 
 ![Tutorial](https://github.com/Edson-Edu/IA22-Cadastro-Login-Autenticacao/blob/main/img/logo.gif?raw=true)
 
@@ -911,3 +913,7 @@ database()
 
 # Parabéns!
  Você chegou ao fim do tutorial! 🎉
+# Autores
+
+| [<img loading="lazy" src="https://avatars.githubusercontent.com/u/106202834?v=4" width=115><br><sub>Edson Edu</sub>](https://github.com/Edson-Edu) |  [<img loading="lazy" src="https://avatars.githubusercontent.com/u/106815323?v=4" width=115><br><sub>Letícia Lima</sub>](https://github.com/leh-lima) |   [<img loading="lazy" src="https://avatars.githubusercontent.com/u/106816015?v=4" width=115><br><sub>Yasmin Andrade</sub>](https://github.com/yasandradeRj) |  [<img loading="lazy" src="https://avatars.githubusercontent.com/u/140689702?v=4" width=115><br><sub>Rhai Vitor</sub>](https://github.com/Rhaiiiii) |
+| :---: | :---: | :---: | :---: |
